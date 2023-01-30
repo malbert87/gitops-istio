@@ -11,7 +11,7 @@ spec:
     name: backend
   # the maximum time in seconds for the canary deployment
   # to make progress before it is rollback (default 600s)
-  progressDeadlineSeconds: 120
+  progressDeadlineSeconds: 600
   # HPA reference (optional)
   autoscalerRef:
     apiVersion: autoscaling/v2beta2
@@ -26,7 +26,7 @@ spec:
     # schedule interval (default 60s)
     interval: 15s
     # max number of failed metric checks before rollback
-    threshold: 10
+    threshold: 50
     # max traffic percentage routed to canary
     # percentage (0-100)
     maxWeight: 50
