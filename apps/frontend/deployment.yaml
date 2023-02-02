@@ -34,7 +34,7 @@ spec:
           command:
             - ./podinfo
             - --port=9898
-            - --level=info
+            - --level=debug
             - --otel-service-name=podinfo_frontend
           env:
             - name: PODINFO_BACKEND_URL
