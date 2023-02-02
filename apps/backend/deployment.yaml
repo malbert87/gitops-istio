@@ -34,7 +34,7 @@ spec:
           command:
             - ./podinfo
             - --port=9898
-            - --level=info
+            - --level=debug
           env:
             - name: PODINFO_UI_COLOR
               value: "#34577c"
