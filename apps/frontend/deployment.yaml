@@ -35,6 +35,7 @@ spec:
             - ./podinfo
             - --port=9898
             - --level=info
+            - --otel-service-name=podinfo_frontend
           env:
             - name: PODINFO_BACKEND_URL
               value: http://backend:9898/echo
