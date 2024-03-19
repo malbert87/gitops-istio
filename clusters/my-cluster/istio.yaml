@@ -31,3 +31,17 @@ spec:
   sourceRef:
     kind: GitRepository
     name: flux-system
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: istio-gateway
+  namespace: istio-system
+spec:
+  dependsOn:
+    - name: istio-base
+    - name: istiod
+  # source: https://github.com/istio/istio/blob/master/manifests/charts/gateway/values.yaml
+  values:
+    autoscaling:
+      enabled: true
